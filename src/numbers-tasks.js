@@ -87,10 +87,18 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(/* a, b */) {
-  throw new Error('Not implemented');
+function getLinearEquationRoot(a, b) {
+  let x = 1;
+  if (b > 0) {
+    x = -b / a;
+    return x;
+  }
+  if (b < 0) {
+    x = (b / a) * -1;
+    return x;
+  }
+  return 0;
 }
-
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
  * coordinates in Cartesian plane.
